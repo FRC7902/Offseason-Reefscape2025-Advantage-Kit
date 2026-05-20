@@ -1,6 +1,7 @@
 package frc.robot;
 
 import edu.wpi.first.math.geometry.Pose3d;
+import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.Filesystem;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj2.command.Command;
@@ -36,6 +37,8 @@ public class RobotContainer {
           .allianceRelativeControl(true);
 
   public RobotContainer() {
+    DriverStation.silenceJoystickConnectionWarning(true);
+
     configureBindings();
   }
 
